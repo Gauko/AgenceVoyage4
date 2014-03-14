@@ -15,7 +15,7 @@ public class OffreDAO
 		Session s = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = s.beginTransaction();
 		
-		Query select = s.createQuery("select new "+HibernateUtil.locatePojo+".Offre(o.id,o.libelle,o.prix,o.placesTotales,o.placesDisponibles,o.idTrajet) from Offre o");
+		Query select = s.createQuery("select new "+HibernateUtil.locatePojo+".Offre(o.id,o.libelle,o.prix,o.placesTotales,o.placesDisponibles,o.dateDebut,o.dateFin,o.idTrajet) from Offre o");
 		
 		ArrayList<Offre> offres = new ArrayList<Offre>();
 		
@@ -31,6 +31,8 @@ public class OffreDAO
 			o.setPlacesDisponibles(a.getPlacesDisponibles());
 			o.setPlacesTotales(a.getPlacesTotales());
 			o.setPrix(a.getPrix());
+			o.setDateDebut(a.getDateDebut());
+			o.setDateFin(a.getDateFin());
 			o.setIdTrajet(a.getIdTrajet());
 			
 			offres.add(o);
@@ -77,7 +79,7 @@ public class OffreDAO
 		Session s = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = s.beginTransaction();
 		
-		Query q = s.createSQLQuery("insert into Offre(libelle, placesDisponibles, placesTotales, prix, idTrajet) values (\'"+o.getLibelle()+"\',"+o.getPlacesDisponibles()+","+o.getPlacesTotales()+","+o.getPrix()+","+o.getIdTrajet()+")");
+		Query q = s.createSQLQuery("insert into Offre(libelle, placesDisponibles, placesTotales, prix, dateDebut, dateFin, idTrajet) values (\'"+o.getLibelle()+"\',"+o.getPlacesDisponibles()+","+o.getPlacesTotales()+","+o.getPrix()+","+o.getDateDebut()+","+o.getDateFin()+","+o.getIdTrajet()+")");
 		
 		q.executeUpdate();
 		tx.commit();
@@ -91,7 +93,7 @@ public class OffreDAO
 		Session s = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = s.beginTransaction();
 		
-		Query q = s.createSQLQuery("update Offre set libelle=\'"+modif.getLibelle()+"\', placesDisponibles="+modif.getPlacesDisponibles()+", placesTotales="+modif.getPlacesTotales()+",prix="+modif.getPrix()+", idTrajet="+modif.getIdTrajet()+" where id="+origine.getId());
+		Query q = s.createSQLQuery("update Offre set libelle=\'"+modif.getLibelle()+"\', placesDisponibles="+modif.getPlacesDisponibles()+", placesTotales="+modif.getPlacesTotales()+",prix="+modif.getPrix()+", dateDebut="+modif.getDateDebut()+", dateFin="+modif.getDateFin()+", idTrajet="+modif.getIdTrajet()+" where id="+origine.getId());
 		
 		q.executeUpdate();
 		tx.commit();

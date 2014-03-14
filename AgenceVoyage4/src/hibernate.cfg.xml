@@ -16,7 +16,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/agenceVoyage</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">e45hgt3y</property>
+    <property name="hibernate.connection.password"></property>
     <property name="hibernate.generate_statistics">false</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.format_sql">true</property>
