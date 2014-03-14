@@ -74,6 +74,7 @@ public class TableOffres extends Composite {
 		cellTable.addColumn(priceColumn, "Prix");
 		ArrayList<Offre> tmp = OffreDAO.selectAll();
 		listOffers.setList(tmp);
+		
 		listOffers.addDataDisplay(cellTable);
 
 		final SimplePager pager = new SimplePager();
