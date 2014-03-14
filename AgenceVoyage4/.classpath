@@ -4,5 +4,18 @@
 	<classpathentry kind="src" output="test-classes" path="test"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="hib_antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="hib_dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="hib_hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="hib_hibernate-core-4.1.7.Final.jar"/>
+	<classpathentry kind="lib" path="hib_hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="hib_javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="hib_jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="hib_jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="hib_mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="hib_slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="hibernate-entitymanager-4.1.1.Final.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

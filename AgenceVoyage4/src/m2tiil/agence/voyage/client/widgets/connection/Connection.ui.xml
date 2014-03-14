@@ -1,0 +1,14 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	<g:FlowPanel>
+		<g:HorizontalPanel>
+			<g:Label text="Nom d'utilisateur" ui:field='login' width="128px" />
+			<g:TextBox ui:field='loginName' width="263px" />
+		</g:HorizontalPanel>
+		<g:HorizontalPanel>
+			<g:Label text="Mot de passe" ui:field='password' width="128px" />
+			<g:PasswordTextBox ui:field='paswd' width="262px" />
+		</g:HorizontalPanel>
+		<g:Button text="Valider" ui:field='connect' width="69px" />
+	</g:FlowPanel>
+</ui:UiBinder>

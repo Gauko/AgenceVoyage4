@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration> 
+  <session-factory> 
+  	<!-- <property name="current_session_context_class">thread</property> -->
+    <!-- configuration pool via c3p0 -->
+    <property name="c3p0.acquire_increment">5</property>
+    <property name="c3p0.idle_test_period">0</property>
+    <property name="c3p0.max_size">50</property>
+    <property name="c3p0.max_statements">0</property>
+    <property name="c3p0.min_size">5</property>
+    <property name="c3p0.timeout">0</property>
+    <property name="javax.persistence.validation.mode">none</property>
+    
+    <!-- Connexion -->
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/agenceVoyage</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">e45hgt3y</property>
+    <property name="hibernate.generate_statistics">false</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Offre"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Trajet"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Ville"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.MoyenDeTransport"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Type"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Societe"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Utilisateur"/>
+   	<mapping class="m2tiil.agence.voyage.shared.bdd.pojo.Reservation"/>
+   </session-factory>
+</hibernate-configuration> 
